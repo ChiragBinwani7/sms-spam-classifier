@@ -1,16 +1,10 @@
 import streamlit as st
-import nltk
 from nltk.corpus import stopwords
+import nltk
+nltk.data.path.append('./nltk_data')
 import string
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
-ar = np.array([1,2,3])
-pd.DataFrame({"col" : ar})
-
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
-
 import pickle
 tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('ml_model.pkl','rb'))
